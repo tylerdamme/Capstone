@@ -6,7 +6,8 @@ class Team < ApplicationRecord
   def as_json
     {
       id: id,
-      name: name
+      name: name,
+      news_sources: news_sources.map { |news_source| news_source.display_name }
     }
   end
 end

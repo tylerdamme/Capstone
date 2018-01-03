@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   namespace :v1 do
     post "/users" => "users#create"
 
+    post "/news_sources" => "news_sources#create"
+
     get "/teams" => "teams#index"
     get "/teams/:id" => "teams#show"
   end

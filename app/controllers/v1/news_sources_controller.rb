@@ -1,4 +1,4 @@
-class NewsSourcesController < ApplicationController
+class V1::NewsSourcesController < ApplicationController
   
   def create
     news_source = NewsSource.new(
@@ -14,4 +14,5 @@ class NewsSourcesController < ApplicationController
       render json: {errors: news_source.errors.full_messages}, status: :bad_request
     end
   end
+
 end

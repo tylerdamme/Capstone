@@ -33,12 +33,13 @@ while true
     params = {}
     puts "Fox Sports? (y/n)"
     choice = gets.chomp
-    if choice == y
+    if choice == "y"
       params[:display_name] = "Fox Sports"
       params[:api_name] = "fox-sports"
-      response = Unirest.post("http:localhost:3000/v1/news_sources", parameters: params)
+      response = Unirest.post("http://localhost:3000/v1/news_sources", parameters: params)
       news = response.body
       pp news
+    end
   elsif input_option == "signup"
     params = {}
     print "Enter a name: "

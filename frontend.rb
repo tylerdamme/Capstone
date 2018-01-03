@@ -8,7 +8,8 @@ while true
   puts "Welcome to the Sports News App!"
   puts
   puts "[1] View my teams"
-  puts "[2] Create news sources"
+  puts "[2] View an individual team"
+  puts "[3] Create news sources"
   puts
   puts "[signup] Signup"
   puts "[login] Login"
@@ -30,10 +31,27 @@ while true
     team = response.body
     pp team
   elsif input_option == "2"
+    print "Enter id of team you wish to view? "
+    team_id = gets.chomp
+    response = Unirest.get("http://localhost:3000/v1/teams/#{team_id}")
+    team = response.body
+    pp team
+    puts
+    puts "View News? (y/n)"
+    choice = gets.chomp
+    if choice == "y"
+    end
+  elsif input_option == "3"
     params = {}
+    print "Select a team to add news source: "
+    team_id = gets.chomp
+    response = Unirest.get("http://localhost:3000/v1/teams/#{team_id}")
+    team = response.body
+    pp team
     puts "Fox Sports? (y/n)"
     choice = gets.chomp
     if choice == "y"
+      params[:team_id] = team_id
       params[:display_name] = "Fox Sports"
       params[:api_name] = "fox-sports"
       response = Unirest.post("http://localhost:3000/v1/news_sources", parameters: params)

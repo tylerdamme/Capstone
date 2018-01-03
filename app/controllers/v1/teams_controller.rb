@@ -1,5 +1,5 @@
 class V1::TeamsController < ApplicationController
-  
+  before_action :authenticate_user
   def index
     teams = current_user.teams
     render json: teams.as_json

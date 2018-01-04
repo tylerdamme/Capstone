@@ -43,10 +43,15 @@ var TeamsShowPage = {
   },
   methods: {
     apiSourceChanged: function(apiSource) {
-      if (apiSource.checked === true) {
-        console.log("hello");
-      } else if (apiSource.checked === false) {
-        console.log("goodbye");
+      var params = {
+        api_name: apiSource.apiName,
+        display_name: apiSource.displayName,
+        team_id: this.$route.params.id
+      };
+      if (apiSource.checked) {
+        console.log("hello", params);
+      } else {
+        console.log("goodbye", params);
       }
     }
   },

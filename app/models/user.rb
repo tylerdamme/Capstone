@@ -3,6 +3,9 @@ class User < ApplicationRecord
   has_many :teams, through: :user_teams
   has_secure_password
 
+  validates :email, uniqueness: true
+  validates :email, presence: true
+  validates :name, presence: true
   def as_json
     {
       id: id,

@@ -31,7 +31,8 @@ var TeamsShowPage = {
         { apiName: "BBC Sport", displayName: "BBC Sport", checked: false },
         { apiName: "BBC Sport", displayName: "BBC Sport", checked: false }
       ],
-      team: []
+      team: [],
+      errors: []
     };
   },
   created: function() {
@@ -40,6 +41,12 @@ var TeamsShowPage = {
         this.team = response.data;
       }.bind(this)
     );
+
+    // axios.get("v1/news_sources").then(
+    //   function(response) {
+    //     this.apiSources;
+    //   }.bind(this)
+    // );
   },
   methods: {
     apiSourceChanged: function(apiSource) {
@@ -50,8 +57,26 @@ var TeamsShowPage = {
       };
       if (apiSource.checked) {
         console.log("hello", params);
+        axios
+          .post("/v1/news_sources", params)
+          .then(function(response) {})
+          .catch(
+            function(error) {
+              this.errors = error.response.data.errors;
+            }.bind(this)
+          );
+        console.log("did it work?");
       } else {
         console.log("goodbye", params);
+        axios
+          .delete("/v1/news_source_by_name", params)
+          .then(function(response) {})
+          .catch(
+            function(error) {
+              this.errors = error.response.data.errors;
+            }.bind(this)
+          );
+        console.log("did it get removed?");
       }
     }
   },
@@ -144,5 +169,11 @@ var router = new VueRouter({
 
 var app = new Vue({
   el: "#app",
-  router: router
+  router: router,
+  created: function() {
+    var jwt = localStorage.getItem("jwt");
+    if (jwt) {
+      axios.defaults.headers.common["Authorization"] = jwt;
+    }
+  }
 });

@@ -1,5 +1,5 @@
 class V1::NewsSourcesController < ApplicationController
-  
+  # before_action :authenticate_user
   def create
     news_source = NewsSource.find_by(api_name: params[:api_name], user_id: current_user.id, team_id: params[:team_id])
     if news_source
@@ -20,7 +20,7 @@ class V1::NewsSourcesController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy_by_name
     news_source = NewsSource.find_by(api_name: params[:api_name], user_id: current_user.id, team_id: params[:team_id])
     if news_source
       news_source.destroy

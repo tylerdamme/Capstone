@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     post "/users" => "users#create"
 
     post "/news_sources" => "news_sources#create"
-    delete "/news_sources/:id" => "news_sources#destroy"
+    # delete "/news_sources/:id" => "news_sources#destroy"
+    delete "/news_source_by_name" => "news_sources#destroy_by_name"
 
     get "/teams" => "teams#index"
     get "/teams/:id" => "teams#show"

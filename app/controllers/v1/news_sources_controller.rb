@@ -1,5 +1,5 @@
 class V1::NewsSourcesController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
   def create
     news_source = NewsSource.find_by(api_name: params[:api_name], user_id: current_user.id, team_id: params[:team_id])
     if news_source
@@ -18,6 +18,16 @@ class V1::NewsSourcesController < ApplicationController
         render json: {errors: news_source.errors.full_messages}, status: :bad_request
       end
     end
+  end
+
+  def index
+    # news = current_user.teams.news_sources
+    # news = NewsSource.where(user_id: current_user.id, team_id: params[:team_id])
+    news = current_user.news_sources
+    if params[:team_id]
+      news = NewsSource.where(user_id: current_user.id, team_id: params[:team_id])  
+    end
+    render json: news.as_json
   end
 
   def destroy_by_name

@@ -78,6 +78,7 @@
         <input type="checkbox" v-model="apiSource.checked" v-on:change="apiSourceChanged(apiSource)">
         <label>{{apiSource.displayName}}</label>
       </div>
+      <p v-for="article in articles"></p>
 <!--       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="#">BBC Sport</a>
         <a class="dropdown-item" href="#">Bleacher Report</a>

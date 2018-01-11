@@ -231,7 +231,10 @@ var router = new VueRouter({
     { path: "/signup", component: SignupPage },
     { path: "/login", component: LoginPage },
     { path: "/logout", component: LogoutPage }
-  ]
+  ],
+  scrollBehavior: function(to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  }
 });
 
 var app = new Vue({

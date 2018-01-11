@@ -77,15 +77,16 @@ var TeamsShowPage = {
       ],
       team: [],
       articles: [],
-      errors: []
+      errors: [],
+      message: "Test"
     };
   },
   created: function() {
-    // axios.get("/v1/teams/" + this.$route.params.id).then(
-    //   function(response) {
-    //     this.team = response.data;
-    //   }.bind(this)
-    // );
+    axios.get("/v1/teams/" + this.$route.params.id).then(
+      function(response) {
+        this.team = response.data;
+      }.bind(this)
+    );
 
     axios.get("v1/news_sources?team_id=" + this.$route.params.id).then(
       function(response) {

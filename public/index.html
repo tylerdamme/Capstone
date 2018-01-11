@@ -403,13 +403,410 @@
                                 </figure>
                                 <div class="text">
                                     <h5 class="lable_1">{{ team.name }}</h5>
-                                    <h6><a href="/#/ 'teams/' + team.id">Go to Clubhouse</a></h6>
+                                    <h6><a v-bind:href=" '/#/teams/' + team.id">Go to Clubhouse</a></h6>
                                 </div>
                             </div>
                             <!--Featured 4 Thumb End-->
                         </div>
                     </div>
                 </div>
+</template>
+
+<template id="teams-show-page">
+  <div class="container">
+    <div class="innner_banner">
+        <div class="container">
+            <h3>{{ team.name }}</h3>
+            <!-- <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">blog</a></li>
+                <li class="active"><span>blog large with sidebar</span></li>
+            </ul> -->
+        </div>
+    </div>
+    <!--Inner Banner End-->
+    <div class="kode_content_wrap">
+        <section class="kf_blog3_sidebar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!--Featured 2 Slider Start-->
+                        <div class="kf_featured_wrap3">
+                            <!--Featured 2 thumb Start-->
+                            <div class="kf_featured_thumb">
+                                <figure>
+                                    <img src="extra-images/feature_list_1.jpg" alt="">
+                                </figure>
+                                <div class="text_wrper">
+                                    <div class="text">
+                                        <h6>Fifa world cup 2016</h6>                                
+                                        <h2><a href="#">Italy</a> <small>VS</small><a href="#"> England</a></h2>
+                                        <span>11 Sep, 2016 / Anna Smith</span>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </p>
+                                        <a class="btn_2" href="#">Read More</a>
+                                    </div>
+                                    <div class="thumb_footer">
+                                        <div class="admin_thumb">
+                                            <figure><img src="extra-images/admin.jpg" alt=""></figure>
+                                            <h6><a href="#">Alba Smith</a></h6>
+                                        </div>
+                                        <ul class="blog_meta">
+                                            <li>
+                                                <span><i class="fa fa-eye"></i>169</span>
+                                            </li>
+                                            <li>
+                                                <span class="heart"><i class="fa fa-heart-o"></i>477</span>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-comment-o"></i>09</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Featured 2 thumb End-->
+                            <!--Featured 2 thumb Start-->
+                            <div class="kf_featured_thumb">
+                                <figure>
+                                    <img src="extra-images/feature_list_2.jpg" alt="">
+                                </figure>
+                                <div class="text_wrper">
+                                    <div class="text">
+                                        <h6>Fifa world cup 2016</h6>                                
+                                        <h2><a href="#">Italy</a> <small>VS</small><a href="#"> England</a></h2>
+                                        <span>11 Sep, 2016 / Anna Smith</span>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </p>
+                                        <a class="btn_2" href="#">Read More</a>
+                                    </div>
+                                    <div class="thumb_footer">
+                                        <div class="admin_thumb">
+                                            <figure><img src="extra-images/admin.jpg" alt=""></figure>
+                                            <h6><a href="#">Alba Smith</a></h6>
+                                        </div>
+                                        <ul class="blog_meta">
+                                            <li>
+                                                <span><i class="fa fa-eye"></i>169</span>
+                                            </li>
+                                            <li>
+                                                <span class="heart"><i class="fa fa-heart-o"></i>477</span>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-comment-o"></i>09</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Featured 2 thumb End-->
+                            <!--Featured 2 thumb Start-->
+                            <div class="kf_featured_thumb">
+                                <figure>
+                                    <img src="extra-images/feature_list_3.jpg" alt="">
+                                </figure>
+                                <div class="text_wrper">
+                                    <div class="text">
+                                        <h6>Fifa world cup 2016</h6>                                
+                                        <h2><a href="#">Italy</a> <small>VS</small><a href="#"> England</a></h2>
+                                        <span>11 Sep, 2016 / Anna Smith</span>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </p>
+                                        <a class="btn_2" href="#">Read More</a>
+                                    </div>
+                                    <div class="thumb_footer">
+                                        <div class="admin_thumb">
+                                            <figure><img src="extra-images/admin.jpg" alt=""></figure>
+                                            <h6><a href="#">Alba Smith</a></h6>
+                                        </div>
+                                        <ul class="blog_meta">
+                                            <li>
+                                                <span><i class="fa fa-eye"></i>169</span>
+                                            </li>
+                                            <li>
+                                                <span class="heart"><i class="fa fa-heart-o"></i>477</span>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-comment-o"></i>09</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Featured 2 thumb End-->
+                            <!--Featured 2 thumb Start-->
+                            <div class="kf_featured_thumb">
+                                <figure>
+                                    <img src="extra-images/feature_list_4.jpg" alt="">
+                                </figure>
+                                <div class="text_wrper">
+                                    <div class="text">
+                                        <h6>Fifa world cup 2016</h6>                                
+                                        <h2><a href="#">Italy</a> <small>VS</small><a href="#"> England</a></h2>
+                                        <span>11 Sep, 2016 / Anna Smith</span>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </p>
+                                        <a class="btn_2" href="#">Read More</a>
+                                    </div>
+                                    <div class="thumb_footer">
+                                        <div class="admin_thumb">
+                                            <figure><img src="extra-images/admin.jpg" alt=""></figure>
+                                            <h6><a href="#">Alba Smith</a></h6>
+                                        </div>
+                                        <ul class="blog_meta">
+                                            <li>
+                                                <span><i class="fa fa-eye"></i>169</span>
+                                            </li>
+                                            <li>
+                                                <span class="heart"><i class="fa fa-heart-o"></i>477</span>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-comment-o"></i>09</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Featured 2 thumb End--> 
+                        </div>
+                        <!--Featured 2 Slider End-->
+                        <!--Kf Pagination Start-->
+                        <div class="kode-pagination text-right">
+                            <span class="page-numbers current">1</span>
+                            <a class="page-numbers" href="#">2</a>
+                            <a class="page-numbers" href="#">3</a>
+                            <a class="page-numbers border_none" href="#">...</a>
+                            <a class="page-numbers" href="#">18</a>
+                            <a class="page-numbers" href="#">19</a>
+                            <a class="page-numbers" href="#">20</a>
+                        </div>
+                        <!--Kf Pagination End-->
+                    </div>
+                    <aside class="col-md-4">
+                        <!--Widget Ranking Start-->
+                        <div class="widget widget_recentnews">
+                            <!--Heading 1 Start-->
+                            <h6 class="kf_hd1">
+                                <span>Recent News</span>
+                            </h6>
+                            <!--Heading 1 END-->
+                            <div class="kf_border">
+                                <!--Recent News Start-->
+                                <div class="kf_recentnews">
+                                    <figure>
+                                        <a href="#"><img src="extra-images/recent_1.jpg" alt=""></a>
+                                    </figure>
+                                    <div class="text">
+                                        <h6><a href="#">Recent News Heading</a></h6>
+                                        <p>The Arch Rivals have two major Victories</p>
+                                        <em class="kf_date">August 23rd, 2016</em>
+                                    </div>
+                                </div>
+                                <!--Recent News End-->
+                                <!--Recent News Start-->
+                                <div class="kf_recentnews">
+                                    <figure>
+                                        <a href="#"><img src="extra-images/recent_2.jpg" alt=""></a>
+                                    </figure>
+                                    <div class="text">
+                                        <h6><a href="#">Recent News Heading</a></h6>
+                                        <p>The Arch Rivals have two major Victories</p>
+                                        <em class="kf_date">August 23rd, 2016</em>
+                                    </div>
+                                </div>
+                                <!--Recent News End-->
+                                <!--Recent News Start-->
+                                <div class="kf_recentnews">
+                                    <figure>
+                                        <a href="#"><img src="extra-images/recent_3.jpg" alt=""></a>
+                                    </figure>
+                                    <div class="text">
+                                        <h6><a href="#">Recent News Heading</a></h6>
+                                        <p>The Arch Rivals have two major Victories</p>
+                                        <em class="kf_date">August 23rd, 2016</em>
+                                    </div>
+                                </div>
+                                <!--Recent News End-->
+                                <!--Recent News Start-->
+                                <div class="kf_recentnews">
+                                    <figure>
+                                        <a href="#"><img src="extra-images/recent_4.jpg" alt=""></a>
+                                    </figure>
+                                    <div class="text">
+                                        <h6><a href="#">Recent News Heading</a></h6>
+                                        <p>The Arch Rivals have two major Victories</p>
+                                        <em class="kf_date">August 23rd, 2016</em>
+                                    </div>
+                                </div>
+                                <!--Recent News End-->
+                            </div>
+                        </div>
+                        <!--Widget Next Match Start-->
+                        <div class="widget widget_nextmatch">
+                            <!--Heading 1 Start-->
+                            <h6 class="kf_hd1">
+                                <span>Next Match</span>
+                            </h6>
+                            <!--Heading 1 END-->
+                            <div class="kf_border">
+                                <!--Widget Next Match Dec Start-->
+                                <div class="nextmatch_dec">
+                                    <h6>Laliga Semi Finals at city stadium</h6>
+                                    <span>Friday, 10th Sep, 2016, 16:00GMT</span>
+                                    <div class="match_teams">
+                                        <div class="pull-left">
+                                            <a href="#"><img src="images/team_logo11.png" alt=""></a>
+                                        </div>
+                                        <span>vs</span>
+                                        <div class="pull-right">
+                                            <a href="#"><img src="images/team_logo12.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <a class="input-btn" href="#">Buy Tickets Now</a>
+                                    <h5>Starting in</h5>
+                                    <!--Widget COUNT Down Start-->
+                                    <ul class="kf_countdown countdown">
+                                        <li>
+                                            <span class="days">69</span>
+                                            <p class="days_ref">days</p>
+                                        </li>
+                                        <li>
+                                            <span class="hours">13</span>
+                                            <p class="hours_ref">hours</p>
+                                        </li>
+                                        <li>
+                                            <span class="minutes">44</span>
+                                            <p class="minutes_ref">mins</p>
+                                        </li>
+                                        <li>
+                                            <span class="seconds last">12</span>
+                                            <p class="seconds_ref">secs</p>
+                                        </li>
+                                    </ul>
+                                    <!--Widget COUNT Down End-->
+                                </div>
+                                <!--Widget Next Match Dec End-->
+                            </div>
+                        </div>
+                        <!--Widget Next Match End-->
+                        <!--Widget NewsLatter Start-->
+                        <div class="widget widget_newsletter">
+                            <!--Heading 1 Start-->
+                            <h6 class="kf_hd1">
+                                <span>Newsletters</span>
+                            </h6>
+                            <!--Heading 1 END-->
+                            <div class="kf_border">
+                                <div class="newsletter_dec">
+                                    <h6>Subcribe Now!</h6>
+                                    <p>Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor </p>
+                                    <!--Input Dec Start-->
+                                    <div class="input_dec">
+                                        <input type="text" placeholder="Your Name">
+                                    </div>
+                                    <!--Input Dec END-->
+                                    <!--Input Dec Start-->
+                                    <div class="input_dec">
+                                        <input type="text" placeholder="Your E-mail ID">
+                                    </div>
+                                    <!--Input Dec END-->
+                                    <!--Radio Wrap Start-->
+                                    <div class="radio_style2">
+                                        <label class="radio_dec">
+                                            <span class="radio">
+                                                <input name="foo1" value="1" checked="" type="radio">
+                                                <span class="radio-value" aria-hidden="true"></span>
+                                            </span>
+                                            <span>Daily</span>
+                                        </label>
+                                        <label class="radio_dec">
+                                            <span class="radio">
+                                                <input name="foo1" value="1" type="radio">
+                                                <span class="radio-value" aria-hidden="true"></span>
+                                            </span>
+                                            <span>Weekly</span>
+                                        </label>
+                                        <label class="radio_dec">
+                                            <span class="radio">
+                                                <input name="foo1" value="1" type="radio">
+                                                <span class="radio-value" aria-hidden="true"></span>
+                                            </span>
+                                            <span>Monthly</span>
+                                        </label>
+                                    </div>
+                                    <!--Radio Wrap End-->
+                                    <input class="input-btn" type="button" value="Subscribe">
+                                    <em>100% No spam! We have promised to Our Mother...</em>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Widget NewsLatter End-->
+                        <!--Widget poll Start-->
+                        <div class="widget widget_poll">
+                            <!--Heading 1 Start-->
+                            <h6 class="kf_hd1">
+                                <span>Soccer Poll</span>
+                            </h6>
+                            <!--Heading 1 END-->
+                            <!--Pool Wrap Start-->
+                            <div class="kf_poll_dec">
+                                <h6>Who will be the best winnter of golden league</h6>
+                                <!--Radio Wrap Start-->
+                                <div class="radio_style1">
+                                    <label class="radio_dec">
+                                        <span class="radio">
+                                            <input name="foo" value="1" checked="" type="radio">
+                                            <span class="radio-value" aria-hidden="true"></span>
+                                        </span>
+                                        <span>Leonal Messi</span>
+                                    </label>
+                                    <label class="radio_dec">
+                                        <span class="radio">
+                                            <input name="foo" value="1" type="radio">
+                                            <span class="radio-value" aria-hidden="true"></span>
+                                        </span>
+                                        <span>hristiano Ronaldo</span>
+                                    </label>
+                                    <label class="radio_dec">
+                                        <span class="radio">
+                                            <input name="foo" value="1" type="radio">
+                                            <span class="radio-value" aria-hidden="true"></span>
+                                        </span>
+                                        <span>Van Ronnie</span>
+                                    </label>
+                                </div>
+                                <!--Radio Wrap End-->
+                                <input class="input-btn" type="button" value="submit">
+                            </div>
+                            <!--Pool Wrap End-->
+                        </div>
+                        <!--Widget poll End-->
+                        <div class="widget widget_social">
+                            <a class="facebook" href="#">
+                                <i class="fa fa-facebook"></i>
+                                <span>Like Page</span>
+                                <em>3265 Likes</em>
+                            </a>
+                            <a class="twitter" href="#">
+                                <i class="fa fa-twitter"></i>
+                                <span>Follow us</span>
+                                <em>3265 Likes</em>
+                            </a>
+                            <a class="rss" href="#">
+                                <i class="fa fa-rss"></i>
+                                <span>Subscribe</span>
+                                <em>3265 Likes</em>
+                            </a>
+                        </div>
+                        <!--Widget Add 2 Strat-->
+                        <div class="widget widget_add">
+                            <div class="add_banner">
+                                <a href="#"><img src="extra-images/add_banner2.jpg" alt=""></a>
+                            </div>
+                        </div>
+                        <!--Widget Add 2 End-->
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </div>
+  </div>
 </template>
 
 <template id="signup-page">

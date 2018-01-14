@@ -12,6 +12,25 @@ var HomePage = {
     axios.get("/v1/teams").then(
       function(response) {
         this.teams = response.data;
+        // this.teams.forEach(
+        //   function(team) {
+        //     axios.get("/v1/info?team_id=" + team.id).then(function(response) {
+        //       team.info = response.data;
+        //       console.log("team info: ", team.info);
+        //     });
+        //   }.bind(this)
+        // );
+        for (var i = 0; i < this.teams.length; i++) {
+          let team = this.teams[i];
+          axios.get("/v1/info?team_id=" + team.id).then(
+            function(response) {
+              Vue.set(team, "badgeUrl", response.data.teams[0].strTeamBadge);
+              // team.info = response.data;
+              // console.log("...", this.teams);
+              // this.$forceUpdate();
+            }.bind(this)
+          );
+        }
       }.bind(this)
     );
   },
@@ -113,36 +132,41 @@ var TeamsShowPage = {
         team_id: this.$route.params.id
       };
       if (apiSource.checked) {
-        console.log("hello", params);
         axios
           .post("/v1/news_sources", params)
-          .then(function(response) {})
+          .then(
+            function(response) {
+              this.getNews();
+            }.bind(this)
+          )
           .catch(
             function(error) {
               this.errors = error.response.data.errors;
             }.bind(this)
           );
-        console.log("did it work?");
       } else {
         console.log("goodbye", params);
         axios
           .delete("/v1/news_source_by_name", { params: params })
-          .then(function(response) {})
+          .then(
+            function(response) {
+              this.getNews();
+            }.bind(this)
+          )
           .catch(
             function(error) {
               this.errors = error.response.data.errors;
             }.bind(this)
           );
-        console.log("did it get removed?");
       }
-      this.getNews();
     },
     getNews: function() {
-      console.log("getNews");
       axios.get("/v1/news_api?team_id=" + this.$route.params.id).then(
         function(response) {
           console.log(response.data);
-          this.articles = response.data.articles;
+          this.articles = response.data.articles.sort(
+            (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
+          );
         }.bind(this)
       );
     }

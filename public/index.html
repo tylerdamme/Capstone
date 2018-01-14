@@ -399,7 +399,7 @@
                             <!--Featured 4 Thumb Start-->
                             <div class="kf_featured_thumb4">
                                 <figure>
-                                    <img src="extra-images/feature_1.jpg" alt="">
+                                    <img :src="team.badgeUrl" alt="">
                                 </figure>
                                 <div class="text">
                                     <h5 class="lable_1">{{ team.name }}</h5>
@@ -410,6 +410,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+    </div>
 </template>
 
 <template id="teams-show-page">
@@ -443,7 +446,7 @@
                                         <h2>{{ article.title }}</h2>
                                         <span>{{ article.author }}</span>
                                         <p>{{ article.description }}</p>
-                                        <a class="btn_2" href="#">Read More</a>
+                                        <a class="btn_2" v-bind:href="article.url" target="_blank">Read More</a>
                                     </div>
                                     <!-- <div class="thumb_footer">
                                         <div class="admin_thumb">
@@ -541,17 +544,21 @@
                                 <!--Recent News End-->
                             </div>
                         </div>
+
                         <!--Widget Next Match Start-->
                         <div class="widget widget_nextmatch">
                             <!--Heading 1 Start-->
                             <h6 class="kf_hd1">
-                                <span>Next Match</span>
+                                <span>News Sources</span>
                             </h6>
                             <!--Heading 1 END-->
                             <div class="kf_border">
                                 <!--Widget Next Match Dec Start-->
                                 <div class="nextmatch_dec">
-                                    <h6>Laliga Semi Finals at city stadium</h6>
+                                    <h6><div v-for="apiSource in apiSources">
+                                    <input type="checkbox" v-model="apiSource.checked" v-on:change="apiSourceChanged(apiSource)">
+                                    <label>{{apiSource.displayName}}</label>
+                                    </h6></div>
                                     <span>Friday, 10th Sep, 2016, 16:00GMT</span>
                                     <div class="match_teams">
                                         <div class="pull-left">

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get "/teams" => "teams#index"
     get "/news_sources" => "news_sources#index"
     get "/teams/:id" => "teams#show"
+    get "/info" => "team_info#index"
 
     get "/news_api" => "news_api#index"
   end

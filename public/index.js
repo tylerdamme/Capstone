@@ -24,7 +24,11 @@ var HomePage = {
           let team = this.teams[i];
           axios.get("/v1/info?team_id=" + team.id).then(
             function(response) {
-              Vue.set(team, "badgeUrl", response.data.teams[0].strTeamBadge);
+              Vue.set(
+                team,
+                "TeamArtUrl",
+                response.data.teams[0].strTeamFanart1
+              );
               // team.info = response.data;
               // console.log("...", this.teams);
               // this.$forceUpdate();

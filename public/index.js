@@ -24,10 +24,11 @@ var HomePage = {
           let team = this.teams[i];
           axios.get("/v1/info?team_id=" + team.id).then(
             function(response) {
+              console.log(response.data);
               Vue.set(
                 team,
                 "TeamArtUrl",
-                response.data.teams[0].strTeamFanart1
+                response.data.team_info.teams[0].strTeamFanart1
               );
               // team.info = response.data;
               // console.log("...", this.teams);
@@ -100,8 +101,9 @@ var TeamsShowPage = {
       ],
       team: [],
       articles: [],
-      errors: [],
-      message: "Test"
+      results: [],
+      schedule: [],
+      errors: []
     };
   },
   created: function() {
@@ -125,6 +127,14 @@ var TeamsShowPage = {
           }.bind(this)
         );
         this.getNews();
+      }.bind(this)
+    );
+
+    axios.get("/v1/info?team_id=" + this.$route.params.id).then(
+      function(response) {
+        this.results = response.data.recent_results;
+        this.schedule = response.data.schedule;
+        console.log(response.data);
       }.bind(this)
     );
   },

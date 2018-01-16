@@ -132,7 +132,9 @@ var TeamsShowPage = {
 
     axios.get("/v1/info?team_id=" + this.$route.params.id).then(
       function(response) {
-        this.results = response.data.recent_results.results;
+        this.results = response.data.recent_results.results.sort(
+          (a, b) => new Date(a.dateEvent) - new Date(b.dateEvent)
+        );
         this.events = response.data.schedule.events;
         console.log(response.data);
       }.bind(this)

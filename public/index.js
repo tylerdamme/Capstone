@@ -103,6 +103,8 @@ var TeamsShowPage = {
       articles: [],
       results: [],
       events: [],
+      standings: [],
+      info: [],
       errors: []
     };
   },
@@ -136,6 +138,8 @@ var TeamsShowPage = {
           (a, b) => new Date(a.dateEvent) - new Date(b.dateEvent)
         );
         this.events = response.data.schedule.events;
+        this.standings = response.data.standings.table;
+        this.info = response.data.team_info.teams[0];
         console.log(response.data);
       }.bind(this)
     );

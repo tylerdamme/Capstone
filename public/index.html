@@ -511,13 +511,16 @@
                                     <span>News Sources</span>
                                 </h6>
                                 <!--Heading 1 END-->
-                                <div class="kf_border">
+                                <div class="kf_border" style="padding: 1em;">
                                     <!--Widget Next Match Dec Start-->
-                                    <div class="nextmatch_dec">
-                                        <h6><div v-for="apiSource in apiSources">
-                                        <input type="checkbox" v-model="apiSource.checked" v-on:change="apiSourceChanged(apiSource)">
-                                        <label>{{apiSource.displayName}}</label>
-                                        </div></h6>  
+                                    <div class="">
+                                        <div class="form-check" v-for="apiSource in apiSources">
+                                            <h6>
+                                            <input class="form-check-input" type="checkbox" v-model="apiSource.checked" v-on:change="apiSourceChanged(apiSource)">
+                                            <span class="form-check-label">{{apiSource.displayName}}</span>
+                                            </h6>
+                                            <br>
+                                        </div>
                                     </div>
                                     <!--Widget Next Match Dec End-->
                                 </div>
@@ -2229,6 +2232,9 @@
                                     <div class="tb2_time">
                                         <span>Time</span>
                                     </div>
+                                    <div class="tb2_comatition">
+                                        <span>Competition</span>
+                                    </div>
                                     <div class="tb2_status">
                                         <span>Result</span>
                                     </div>
@@ -2239,24 +2245,52 @@
                                         <span>Tickets</span>
                                     </div>
                                 </li>
-                                <li>
+                                <li v-for="result in results">
                                     <div class="tb2_date">
-                                        <span>Friday, March 16</span>
+                                        <span>{{ result.dateEvent }}</span>
                                     </div>
                                     <div class="versus">
                                         <div>
-                                            <span><img src="images/team_logo.png" alt=""></span>
                                             <p>
-                                                <a href="#">Ocean Kings</a>
-                                                <span>Marine Collage</span>
+                                                <a href="#">{{ result.strEvent }}</a>
                                             </p>
                                         </div>
                                     </div>
                                     <div class="tb2_time">
-                                        <span>9:00PM EST</span>
+                                        <span>{{ result.strTime }}T</span>
+                                    </div>
+                                    <div class="tb2_comatition">
+                                        <span>{{ result.strLeague }}</span>
                                     </div>
                                     <div class="tb2_status">
-                                        <span>Result</span>
+                                        <span>{{ result.intHomeScore }} - {{ result.intAwayScore }}</span>
+                                    </div>
+                                    <div class="">
+                                        <span></span>
+                                    </div>
+                                    <div class="">
+                                        <a href="#" class=""></a>
+                                    </div>
+                                </li>
+                                 <li v-for="event in events">
+                                    <div class="tb2_date">
+                                        <span>{{ event.dateEvent }}</span>
+                                    </div>
+                                    <div class="versus">
+                                        <div>
+                                            <p>
+                                                <a href="#">{{ event.strEvent }}</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="tb2_time">
+                                        <span>{{ event.strTime }}</span>
+                                    </div>
+                                    <div class="tb2_comatition">
+                                        <span>{{ event.strLeague}}</span>
+                                    </div>
+                                    <div class="tb2_status">
+                                        <span> - </span>
                                     </div>
                                     <div class="">
                                         <span></span>

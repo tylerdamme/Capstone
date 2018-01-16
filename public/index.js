@@ -102,7 +102,7 @@ var TeamsShowPage = {
       team: [],
       articles: [],
       results: [],
-      schedule: [],
+      events: [],
       errors: []
     };
   },
@@ -132,8 +132,8 @@ var TeamsShowPage = {
 
     axios.get("/v1/info?team_id=" + this.$route.params.id).then(
       function(response) {
-        this.results = response.data.recent_results;
-        this.schedule = response.data.schedule;
+        this.results = response.data.recent_results.results;
+        this.events = response.data.schedule.events;
         console.log(response.data);
       }.bind(this)
     );

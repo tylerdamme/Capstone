@@ -552,26 +552,32 @@
                                         </h6>
                                         <div class="kf_roster_dec">
                                             
-                                                <img v-bind:src="info.strTeamFanart1" alt="">
-                                            
-                                            
+                                                <img v-bind:src="info.strTeamFanart1" alt=""> 
                                         </div>
                                         <!--Roster Dec End-->
                                         <div class="kf_plyer_rating">
                                             <span>
-                                                <strong>Assists</strong>
-                                                <b>15.8</b>
-                                                <em>AVG</em>
+                                                <strong></strong>
+
+                                                <ul class="kf_social3">
+                                                    <li><a v-bind:href="'https://www.' + info.strFacebook"><i class="fa fa-facebook"></i></a></li>
+                                                </ul>
+
+                                                <em></em>
                                             </span>
                                             <span>
-                                                <strong>Steals</strong>
-                                                <b>8.9</b>
-                                                <em>AVG</em>
+                                                <strong></strong>
+                                                <ul class="kf_social3">
+                                                    <li><a v-bind:href="'https://www.' + info.strTwitter"><i class="fa fa-twitter"></i></a></li>
+                                                </ul>
+                                                <em></em>
                                             </span>
                                             <span>
-                                                <strong>Blocks</strong>
-                                                <b>13.6</b>
-                                                <em>AVG</em>
+                                                <strong></strong>
+                                                <ul class="kf_social3">
+                                                    <li><a v-bind:href="'https://www.' + info.strInstagram"><i class="fa fa-instagram"></i></a></li>
+                                                </ul>
+                                                <em></em>
                                             </span>
                                         </div>
 
@@ -579,121 +585,129 @@
                                             <li>
                                                 <div>
                                                     <span>
-                                                        2 Points
-                                                        <em>In his career</em>
+                                                        Location: 
                                                     </span>
                                                 </div>
                                                 <div>
                                                     <span>
-                                                        1250
+                                                        {{ info.strStadiumLocation }}
                                                     </span>
                                                 </div>
                                                 <div>
                                                     <span>
-                                                        3 Points
-                                                        <em>In his career</em>
                                                     </span>
                                                 </div>
                                                 <div>
                                                     <span>
-                                                        680
                                                     </span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div>
                                                     <span>
-                                                        2 Points
-                                                        <em>In his career</em>
+                                                        Founded:
                                                     </span>
                                                 </div>
                                                 <div>
                                                     <span>
-                                                        1250
+                                                        {{ info.intFormedYear }}
                                                     </span>
                                                 </div>
                                                 <div>
                                                     <span>
-                                                        3 Points
-                                                        <em>In his career</em>
+                                                        
+                                                        <em></em>
                                                     </span>
                                                 </div>
                                                 <div>
                                                     <span>
-                                                        680
-                                                    </span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div>
-                                                    <span>
-                                                        2 Points
-                                                        <em>In his career</em>
-                                                    </span>
-                                                </div>
-                                                <div>
-                                                    <span>
-                                                        1250
-                                                    </span>
-                                                </div>
-                                                <div>
-                                                    <span>
-                                                        3 Points
-                                                        <em>In his career</em>
-                                                    </span>
-                                                </div>
-                                                <div>
-                                                    <span>
-                                                        680
+                                                       
                                                     </span>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div>
                                                     <span>
-                                                        2 Points
-                                                        <em>In his career</em>
+                                                        League: 
                                                     </span>
                                                 </div>
                                                 <div>
                                                     <span>
-                                                        1250
+                                                        {{ info.strLeague }}
                                                     </span>
                                                 </div>
                                                 <div>
                                                     <span>
-                                                        3 Points
-                                                        <em>In his career</em>
+                                                        <em></em>
                                                     </span>
                                                 </div>
                                                 <div>
                                                     <span>
-                                                        680
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span>
+                                                        Coach: 
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                        {{ info.strManager }}
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                        
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                       
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span>
+                                                        Venue: 
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                        {{ info.strStadium }}
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span>
+                                                        Website: 
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span><a v-bind:href="'https://' + info.strWebsite">Click Here</a>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>
                                                     </span>
                                                 </div>
                                             </li>
                                         </ul>
-
-                                        <div class="kf_progress1">
-                                            <!--SKILLS PROGRESS START-->
-                                            <div class="skill-progress">
-                                                <span>Shot Accuracy</span>
-                                                <div class="progressbars" progress="65%"></div>
-                                            </div>
-                                            <!--SKILLS PROGRESS END-->
-                                            <!--SKILLS PROGRESS START-->
-                                            <div class="skill-progress">
-                                                <span>Pass Accuracy</span>
-                                                <div class="progressbars" progress="88%"></div>
-                                            </div>
-                                            <!--SKILLS PROGRESS END-->
-                                            <!--SKILLS PROGRESS START-->
-                                            <div class="skill-progress">
-                                                <span>Total Accuracy</span>
-                                                <div class="progressbars" progress="75%"></div>
-                                            </div>
-                                            <!--SKILLS PROGRESS END-->
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-8">

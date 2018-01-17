@@ -14,8 +14,11 @@ class V1::TeamInfoController < ApplicationController
 
     next_five = Unirest.get("http://www.thesportsdb.com/api/v1/json/#{ENV['SPORTSDB_API_KEY']}/eventsnext.php?id=#{api_team_id}")
 
-    standings = Unirest.get("http://www.thesportsdb.com/api/v1/json/#{ENV['SPORTSDB_API_KEY']}/lookuptable.php?l=#{league_id}&s=1718")
+    search_terms = next_five.body["strEvent"]
 
-    render json: {team_info: response.body, recent_results: results.body, schedule: next_five.body, standings: standings.body}
+    pricing = Unirest.get("https://app.ticketmaster.com/discovery/v2/events?apikey=#{ENV['TICKETMASTER_API_KEY']}&keyword=#{search_terms}&countryCode=US")
+
+
+    render json: {team_info: response.body, recent_results: results.body, schedule: next_five.body, tickets: pricing.body}
   end
 end

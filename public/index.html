@@ -1254,11 +1254,14 @@
                                     <div class="tb2_status">
                                         <span>Result</span>
                                     </div>
-                                    <div class="">
+                                    <!-- <div class="">
                                         <span></span>
-                                    </div>
+                                    </div> -->
                                     <div class="tb2_ticket">
                                         <span>Tickets</span>
+                                    </div>
+                                    <div class="tb2_ticketprice">
+                                        <span>Lowest Price</span>
                                     </div>
                                 </li>
                                 <li v-for="result in results">
@@ -1308,11 +1311,11 @@
                                     <div class="tb2_status">
                                         <span> - </span>
                                     </div>
-                                    <div class="">
-                                        <span></span>
-                                    </div>
                                     <div class="tb2_ticket">
-                                        <a href="#" class="input-btn ">Buy Game Ticket</a>
+                                        <a target="_blank" v-bind:href="event.url" class="input-btn ">Buy Game Ticket</a>
+                                    </div>
+                                    <div class="tb2_ticketprice">
+                                        <span>${{event.price}}</span>
                                     </div>
                                 </li>
                             </ul>

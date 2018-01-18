@@ -105,6 +105,7 @@ var TeamsShowPage = {
       events: [],
       info: [],
       errors: []
+      // pricing: []
     };
   },
   created: function() {
@@ -137,7 +138,27 @@ var TeamsShowPage = {
           (a, b) => new Date(a.dateEvent) - new Date(b.dateEvent)
         );
         this.events = response.data.schedule.events;
+        this.events.forEach(function(event) {
+          // axios request for the price
+          axios
+            .get("/v1/info/tickets?event_name=" + event.strEvent)
+            .then(function(response) {
+              console.log("ticket stuff", response.data);
+              Vue.set(
+                event,
+                "price",
+                response.data.price._embedded.events[0].priceRanges[0].min
+              );
+              Vue.set(
+                event,
+                "url",
+                response.data.price._embedded.events[0].url
+              );
+            });
+        });
         this.info = response.data.team_info.teams[0];
+        // this.pricing = response.data.tickets._embedded.events[0];
+        // console.log(this.pricing);
         console.log(response.data);
       }.bind(this)
     );

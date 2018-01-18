@@ -15,13 +15,6 @@ class V1::TeamInfoController < ApplicationController
     next_five = Unirest.get("http://www.thesportsdb.com/api/v1/json/#{ENV['SPORTSDB_API_KEY']}/eventsnext.php?id=#{api_team_id}")
 
     if next_five.body["events"]
-      search_terms = next_five.body["events"][0]["strEvent"]
-      puts "#{search_terms}"
-
-      # min_price = pricing.body["_embedded"]["events"][0]["priceRanges"][0]["min"]
-
-      # puts "#{min_price}"
-
 
       render json: {team_info: response.body, recent_results: results.body, schedule: next_five.body}
     else

@@ -104,7 +104,8 @@ var TeamsShowPage = {
       results: [],
       events: [],
       info: [],
-      errors: []
+      errors: [],
+      minPrice: ""
       // pricing: []
     };
   },
@@ -157,6 +158,8 @@ var TeamsShowPage = {
                   "url",
                   response.data.price._embedded.events[0].url
                 );
+                event.ticketmaster_id =
+                  response.data.price._embedded.events[0].id;
               });
           });
         }
@@ -212,6 +215,16 @@ var TeamsShowPage = {
           );
         }.bind(this)
       );
+    },
+    setAlert: function(inputEvent) {
+      this.minPrice = inputEvent.input;
+      var params = {
+        ticketmaster_id: inputEvent.ticketmaster_id,
+        event_id: inputEvent.idEvent,
+        form_input: this.minPrice
+      };
+      console.log(params);
+      axios.patch("/v1/price_watches", params);
     }
   },
   computed: {}

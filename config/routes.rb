@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     get "/info/tickets" => "team_info#tickets"
 
     get "/news_api" => "news_api#index"
+    get "/info/text" => "team_info#text"
   end
 end

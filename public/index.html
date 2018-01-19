@@ -80,7 +80,7 @@
                         <div class="kode_navigation">
                             <!--Navigation Start-->
                             <ul class="nav">
-                                <li><a href="index.html">home</a></li>
+                                <li><a href="/#/">home</a></li>
                                 <li>
                                     <a href="#">Fixtures & Results</a>
                                     <ul>
@@ -1263,6 +1263,9 @@
                                     <div class="tb2_ticketprice">
                                         <span>Lowest Price</span>
                                     </div>
+                                    <div class="tb2_setprice">
+                                        <span>Set Price Alert</span>
+                                    </div>
                                 </li>
                                 <li v-for="result in results">
                                     <div class="tb2_date">
@@ -1285,10 +1288,13 @@
                                         <span>{{ result.intHomeScore }} - {{ result.intAwayScore }}</span>
                                     </div>
                                     <div class="">
-                                        <span></span>
+                                        <span>No longer available</span>
                                     </div>
                                     <div class="">
-                                        <a href="#" class=""></a>
+                                        <span>N/A</span>
+                                    </div>
+                                    <div class="">
+                                        <span>N/A</span>
                                     </div>
                                 </li>
                                  <li v-for="event in events">
@@ -1316,6 +1322,9 @@
                                     </div>
                                     <div class="tb2_ticketprice">
                                         <span>${{event.price}}</span>
+                                    </div>
+                                    <div class="form-group">
+                                         <input type="text" class="form-control">
                                     </div>
                                 </li>
                             </ul>

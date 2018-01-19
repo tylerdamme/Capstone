@@ -132,6 +132,8 @@ var TeamsShowPage = {
       }.bind(this)
     );
 
+    // axios.get("/v1/info/text");
+
     axios.get("/v1/info?team_id=" + this.$route.params.id).then(
       function(response) {
         this.results = response.data.recent_results.results.sort(

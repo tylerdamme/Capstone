@@ -1,4 +1,5 @@
 class V1::TeamInfoController < ApplicationController
+  require 'twilio-ruby'
 
   def index
     team_name = Team.find_by(id: params[:team_id]).name
@@ -29,5 +30,19 @@ class V1::TeamInfoController < ApplicationController
     pricing = Unirest.get("https://app.ticketmaster.com/discovery/v2/events?apikey=#{ENV['TICKETMASTER_API_KEY']}&keyword=#{search_terms}&countryCode=US")
 
     render json: {price: pricing.body}
+  end
+
+  def text
+
+    # client = Twilio::REST::Client.new(
+    #   ENV['TWILIO_ACCOUNT_SID'],
+    #   ENV['TWILIO_AUTH_TOKEN'],
+    #   )
+
+    # client.messages.create(
+    #   from: ENV['TWILIO_PHONE_NUMBER'],
+    #   to: ENV['CELL_PHONE_NUMBER'],
+    #   body: "Good news!!! You just got a text!")    
+
   end
 end

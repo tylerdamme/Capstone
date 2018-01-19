@@ -1,0 +1,2 @@
+class PriceWatch < ApplicationRecord
+end

@@ -32,17 +32,4 @@ class V1::TeamInfoController < ApplicationController
     render json: {price: pricing.body}
   end
 
-  def text
-
-    # client = Twilio::REST::Client.new(
-    #   ENV['TWILIO_ACCOUNT_SID'],
-    #   ENV['TWILIO_AUTH_TOKEN'],
-    #   )
-
-    # client.messages.create(
-    #   from: ENV['TWILIO_PHONE_NUMBER'],
-    #   to: ENV['CELL_PHONE_NUMBER'],
-    #   body: "Good news!!! You just got a text!")    
-
-  end
 end

@@ -13,6 +13,7 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
+gem 'rufus-scheduler', '~> 3.2'
 gem 'figaro'
 gem 'twilio-ruby'
 gem 'knock'

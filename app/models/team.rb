@@ -2,6 +2,7 @@ class Team < ApplicationRecord
   has_many :user_teams
   has_many :users, through: :user_teams
   has_many :news_sources
+  belongs_to :sport
 
   # def search
   #   search_terms = Team.name

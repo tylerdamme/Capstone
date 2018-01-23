@@ -53,9 +53,6 @@
                             </ul>
                         </div>
                         <div class="kf_right_dec">
-                            <ul class="kf_topdec">  
-                                <li><a href="#">Support</a></li>
-                            </ul>
                             <ul class="kf_user">
                                 <li><a href="/#/signup"><i class="fa fa-lock"></i>Sign up</a></li>
                                 <li><a href="/#/login">Login</a></li>
@@ -82,72 +79,28 @@
                             <ul class="nav">
                                 <li><a href="/#/">home</a></li>
                                 <li>
-                                    <a href="#">Fixtures & Results</a>
+                                    <a href="#">Add a Team</a>
                                     <ul>
-                                        <li><a href="latest-result.html">latest result</a></li>
-                                        <li><a href="team-schedule.html">teamschedule</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">blog</a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">blog 1</a>
+                                        <li v-for="sport in sports">
+                                            <a href="#">{{ sport.name }}</a>
                                             <ul>
-                                                <li><a href="blog-grid-2.html">blog 2</a></li>
-                                                <li><a href="blog-grid-3.html">blog 3</a></li>
-                                                <li><a href="blog-grid-4.html">blog 4</a></li>
+                                                <li v-for="team in sport.teams" v-on:click="addTeam(team)"><a>{{ team.name }}</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="#">blog 2</a>
-                                            <ul>
-                                                <li><a href="blog2-grid-2.html">blog 2</a></li>
-                                                <li><a href="blog2-grid-3.html">blog 3</a></li>
-                                                <li><a href="blog2-grid-4.html">blog 4</a></li>
-                                            </ul>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">My teams</a>
+                                    <ul>
+                                        <li v-for="team in teams">
+                                            <a v-bind:href=" '/#/teams/' + team.id">
+                                                {{ team.name }}
+                                            </a>
+                                            <!-- <router-link v-bind:to="'/teams/' + team.id">
+                                                {{ team.name }}
+                                            </router-link> -->
+                                           <!--  <a href="javascript:void(0)" v-on:click="goToTeam(team.id)">{{ team.name }}!!!</a> -->
                                         </li>
-                                        <li>
-                                            <a href="#">blog 3</a>
-                                            <ul>
-                                                <li><a href="blog3-grid-2.html">blog 2</a></li>
-                                                <li><a href="blog3-grid-3.html">blog 3</a></li>
-                                                <li><a href="blog3-grid-4.html">blog 4</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="blog-grid-with-sidebar.html">blog grid</a></li>
-                                        <li><a href="blog-large-with-sidebar.html">blog large</a></li>
-                                        <li><a href="blog-listing-with-sidebar.html">blog listing</a></li>
-                                        <li><a href="blog-detail.html">blog detail</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">team</a>
-                                    <ul>
-                                        <li><a href="team-overview.html">team overview</a></li>
-                                        <li><a href="team-roster.html">team roster</a></li>
-                                        <li><a href="team-schedule.html">team schedule</a></li>
-                                        <li><a href="team-standing.html">team standing</a></li>
-                                        <li><a href="team-comparison.html">team comparison</a></li>
-                                        <li><a href="teamdetails.html">team details</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">player</a>
-                                    <ul>
-                                        <li><a href="player-detail.html">player detail</a></li>
-                                        <li><a href="players-standing.html">players standing</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">pages</a>
-                                    <ul>
-                                        <li><a href="ticket.html">ticket</a></li>
-                                        <li><a href="shop.html">shop</a></li>
-                                        <li><a href="ticket-detail.html">ticket detail</a></li>
-                                        <li><a href="404.html">404</a></li>
-                                        <li><a href="comingsoon.html">comingsoon</a></li>
-                                        <li><a href="widget.html">widget</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contactus.html">contact us</a></li>
@@ -399,7 +352,7 @@
                                 <!--Featured 4 Thumb Start-->
                                 <div class="kf_featured_thumb4">
                                     <figure>
-                                        <img :src="team.TeamArtUrl" alt="">
+                                        <img :src="team.TeamArtUrl ? team.TeamArtUrl : '/extra-images/feature_1.jpg'" alt="">
                                     </figure>
                                     <div class="text">
                                         <h5 class="lable_1">{{ team.name }}</h5>

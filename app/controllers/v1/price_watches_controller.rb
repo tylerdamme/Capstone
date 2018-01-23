@@ -28,7 +28,7 @@ class V1::PriceWatchesController < ApplicationController
         event_time = response.body["_embedded"]["events"][0]["dates"]["start"]["dateTime"]
         if event_time < Time.now
           scheduler.unschedule(job_id)
-        else ticketmaster_price <= price_watch.form_input
+        elsif ticketmaster_price <= price_watch.form_input
           puts "ticket price met"
           client = Twilio::REST::Client.new(
             ENV['TWILIO_ACCOUNT_SID'],
@@ -40,6 +40,8 @@ class V1::PriceWatchesController < ApplicationController
             to: ENV['CELL_PHONE_NUMBER'],
             body: "Good news!!! Your ticket price has been met!")
           scheduler.unschedule(job_id)
+        else
+          puts "still running"
         end
       end
     end

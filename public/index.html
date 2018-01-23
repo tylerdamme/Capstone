@@ -77,12 +77,12 @@
                         <div class="kode_navigation">
                             <!--Navigation Start-->
                             <ul class="nav">
-                                <li><a href="/#/">home</a></li>
+                                <li><a href="/">home</a></li>
                                 <li>
-                                    <a href="#">Add a Team</a>
+                                    <a href="#" class="disable-me">Add a Team</a>
                                     <ul>
                                         <li v-for="sport in sports">
-                                            <a href="#">{{ sport.name }}</a>
+                                            <a href="#" class="disable-me">{{ sport.name }}</a>
                                             <ul>
                                                 <li v-for="team in sport.teams" v-on:click="addTeam(team)"><a>{{ team.name }}</a></li>
                                             </ul>
@@ -90,7 +90,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">My teams</a>
+                                    <a href="#" class="disable-me">My teams</a>
                                     <ul>
                                         <li v-for="team in teams">
                                             <a v-bind:href=" '/#/teams/' + team.id">
@@ -103,13 +103,13 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="contactus.html">contact us</a></li>
+                                <li><a href="#">contact us</a></li>
                             </ul>
                             <!--DL Menu Start-->
                             <div id="kode-responsive-navigation" class="dl-menuwrapper">
                                 <button class="dl-trigger">Open Menu</button>
                                 <ul class="dl-menu">
-                                    <li><a href="index.html">home</a></li>
+                                    <li><a href="/">home</a></li>
                                     <li class="menu-item kode-parent-menu">
                                         <a href="#">Fixtures & Results</a>
                                         <ul class="dl-submenu">
@@ -193,93 +193,53 @@
             <!--Footer Wrap Start-->
             <footer class="kode_footer_2">
                 <div class="container">
-                    <span class="go-up">
+                    <span class="go-up" style="display:inline;">
                         <i class="fa fa-angle-up"></i>
                     </span>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <!--Widget Text Start-->
                             <div class="widget widget_text">
                                 <div class="logo">
                                     <a href="#"><img src="images/ft_logo2.png" alt=""></a>
                                 </div>
-                                <p>Sed non  mauris vitae erat . Class aptent taciti sociosqu ad litora torquent per.</p>
+                                <p>Questions, comments, (gulp) bugs? Reach out to me via the links below!</p>
                                 <ul class="kf_contact_meta">
                                     <li>
                                         <span class="icon-placeholder"></span>
-                                        <address>616 Street, Old Trafford, New South Wales London , UK</address>
+                                        <address>215 W Ohio St. Floor 3. Chicago, IL</address>
                                     </li>
                                     <li>
                                         <span class="icon-mail"></span>
-                                        <p>info@companyname.com</p>
-                                    </li>
-                                    <li>
-                                        <span class="icon-technology"></span>
-                                        <p>+ 457 789 789 65</p>
+                                        <p>tyler(dot)damme(at)gmail(dot)com</p>
                                     </li>
                                 </ul>
                             </div>
                             <!--Widget Text End-->
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
+                            <div class="widget widget_text" style="text-align: center;">
+                                <h2 class="kf_hd7">Find me on social media</h2>
+                                <ul class="kf_social3">
+                                    <li>
+                                        <a href="https://www.twitter.com/tylerdamme"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/tylerdamme"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/tylerdamme"><i class="fa fa-github"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
                             <div class="widget widget_link2">
-                                <h2 class="kf_hd7">Usefull link</h2>
+                                <h2 class="kf_hd7">Links</h2>
                                 <!--Widget Recent Post Start-->
                                 <ul class="links_dec links_dec2">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Team</a></li>
-                                    <li><a href="#">Gallery</a></li>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                </ul>
-                                <!--Widget Recent Post End-->
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="widget widget_recentpost2">
-                                <h2 class="kf_hd7">Usefull link</h2>
-                                <!--Link Dec Start-->
-                                <ul class="link_rnt_post">
-                                    <li>
-                                        <div class="kf_recentnews">
-                                            <figure>
-                                                <a href="#"><img src="extra-images/recent_3.jpg" alt=""></a>
-                                            </figure>
-                                            <div class="text">
-                                                <h6><a href="#">Recent News Heading</a></h6>
-                                                <p>The Arch Rivals have two major Victories</p>
-                                                <em class="kf_date">August 23rd, 2016</em>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="kf_recentnews">
-                                            <figure>
-                                                <a href="#"><img src="extra-images/recent_4.jpg" alt=""></a>
-                                            </figure>
-                                            <div class="text">
-                                                <h6><a href="#">Recent News Heading</a></h6>
-                                                <p>The Arch Rivals have two major Victories</p>
-                                                <em class="kf_date">August 23rd, 2016</em>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <!--Link Dec End-->
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="widget widget_instagram">
-                                <h2 class="kf_hd7">instagram Widget</h2>
-                                <!--Widget Recent Post Start-->
-                                <ul>
-                                    <li><a href="#"><img src="extra-images/insta1.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="extra-images/insta2.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="extra-images/insta3.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="extra-images/insta4.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="extra-images/insta5.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="extra-images/insta6.jpg" alt=""></a></li>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="#">Take me to the top!</a></li>
                                 </ul>
                                 <!--Widget Recent Post End-->
                             </div>
@@ -291,12 +251,7 @@
             <!--Copy Right Wrap Start-->
             <div class="copy_right3">
                 <div class="container">
-                    <p>2016 @ Gameplay  Design with love <a href="#">KODEFOREST</a></p>
-                    <ul class="kf_social3">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                    </ul>
+                    <p>© 2018 Made with love and care by Tyler Damme. Theme provided by KodeForest</a></p>
                 </div>
             </div>
             <!--Copy Right Wrap End-->
@@ -382,6 +337,7 @@
             <div class="container">
                 <div class="kf_overview_nav">
                     <ul class="row" role="tablist">
+                        <li role="presentation" class="col-md-3"></li>
                         <li role="presentation" class="active col-md-2">
                             <a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">
                             <em>Team</em>
@@ -395,27 +351,9 @@
                         </a>
                         </li>
                         <li role="presentation" class="col-md-2">
-                            <a href="#standing" aria-controls="standing" role="tab" data-toggle="tab">
-                            <em>Team</em>
-                            <span>Standings</span>
-                            </a>
-                        </li>
-                        <li role="presentation" class="col-md-2">
-                            <a href="#latest" aria-controls="latest" role="tab" data-toggle="tab">
-                            <em>Team</em>
-                            <span>Lastest Updates</span>
-                            </a>
-                        </li>
-                        <li role="presentation" class="col-md-2">
                             <a href="#schedule" aria-controls="schedule" role="tab" data-toggle="tab">
                             <em>Team</em>
                             <span>Schedule</span>
-                            </a>
-                        </li>
-                        <li role="presentation" class="col-md-2">
-                            <a href="#gallery" aria-controls="gallery" role="tab" data-toggle="tab">
-                            <em>Team</em>
-                            <span>Gallery</span>
                             </a>
                         </li>
                     </ul>
@@ -682,504 +620,47 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="kode_content_wrap">
-                                <section class="blog_detail_wrap">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-8" style="float:right">
-                                                <div class="kf_blog_detail">
-                                                    <!--Featured 2 Slider Start-->
-                                                    <div class="kf_blog_detail_thumb">
-                                                        <!--Featured 2 thumb Start-->
-                                                        <div class="kf_featured_thumb">
-                                                            <figure>
-                                                                <img v-bind:src="info.strTeamFanart2" v-bind:alt="info.strTeamFanart1">
-                                                            </figure>
-                                                            <div class="text_wrper">
-                                                                <!--thumb Footer Start-->
-                                                                <!--thumb Footer End-->
-                                                                <div class="text_2">
-                                                                    <span class="label2">Team Infomation</span>
-                                                                    <h6><a href="#">{{ team.name }}</a></h6>
-                                                                    <p>{{ info.strDescriptionEN}}</p>    
-                                                                    <!--Game Highlights thumb Start-->
-                                                                    <div class="kf_highlight">
-                                                                        <h5 class="kf_hd6">{{ info.strStadium }}</h5>
-                                                                        <div class="row">
-                                                                            <div class="col-md-5">
-                                                                                <div class="thumb">
-                                                                                    <img v-bind:src="info.strStadiumThumb" alt="">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-7">
-                                                                                <div class="text">
-                                                                                    <p>{{ info.strStadiumDescription }}</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div> 
-                                                                    </div>    
-                                                                </div> 
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                <div class="col-md-8" style="float:right">
+                                    <div class="kf_blog_detail">
+                                        <!--Featured 2 Slider Start-->
+                                        <div class="kf_blog_detail_thumb">
+                                            <!--Featured 2 thumb Start-->
+                                            <div class="kf_featured_thumb">
+                                                <figure>
+                                                    <img v-bind:src="info.strTeamFanart2" v-bind:alt="info.strTeamFanart1">
+                                                </figure>
+                                                <div class="text_wrper">
+                                                    <!--thumb Footer Start-->
+                                                    <!--thumb Footer End-->
+                                                    <div class="text_2">
+                                                        <span class="label2">Team Infomation</span>
+                                                        <h6><a href="#">{{ team.name }}</a></h6>
+                                                        <p>{{ info.strDescriptionEN}}</p>    
+                                                        <!--Game Highlights thumb Start-->
+                                                        <div class="kf_highlight">
+                                                            <h5 class="kf_hd6">{{ info.strStadium }}</h5>
+                                                            <div class="row">
+                                                                <div class="col-md-5">
+                                                                    <div class="thumb">
+                                                                        <img v-bind:src="info.strStadiumThumb" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-7">
+                                                                    <div class="text">
+                                                                        <p>{{ info.strStadiumDescription }}</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div> 
+                                                        </div>    
+                                                    </div> 
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </section>
-                              </div>
+                                </div>
                             </div> 
                         </div>
                         <!--Roster Wrap End-->
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="standing">
-                        <!--Overview Contant Start-->
-                        <div class="kf_overview_contant">
-                            <!--Heading 1 Start-->
-                            <h6 class="kf_hd1 margin_0">
-                                <span>{{ info.strLeague }} standings</span>
-                            </h6>
-                            <!--Heading 1 End-->
-                            <!--Table 2 Start-->
-                            <ul class="kf_table2 team_st_table">
-                                <li class="table_head">
-                                    <div class="tb2_position">
-                                        <span>Pos</span>
-                                    </div>
-                                    <div class="versus">
-                                        <span>Team</span>
-                                    </div>
-                                    <div class="tb2_win">
-                                        <span>w</span>
-                                    </div>
-                                    <div class="tb2_lose">
-                                        <span>l</span>
-                                    </div>
-                                    <div class="tb2_pct">
-                                        <span>d</span>
-                                    </div>
-                                    <div class="tb2_gb">
-                                        <span>gb</span>
-                                    </div>
-                                    <div class="tb2_home">
-                                        <span>Home</span>
-                                    </div>
-                                    <div class="tb2_road">
-                                        <span>road</span>
-                                    </div>
-                                    <div class="tb2_div">
-                                        <span>div</span>
-                                    </div>
-                                    <div class="tb2_ppg">
-                                        <span>ppg</span>
-                                    </div>
-                                    <div class="tb2_oppg">
-                                        <span>oppg</span>
-                                    </div>
-                                    <div class="tb2_diff">
-                                        <span>diff</span>
-                                    </div>
-                                    <div class="tb2_strk">
-                                        <span>strk</span>
-                                    </div>
-                                    <div class="tb2_l10">
-                                        <span>l10</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="tb2_position">
-                                        <span>01</span>
-                                    </div>
-                                    <div class="versus">
-                                        <div>
-                                            <p>
-                                                <a href="#"></a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="tb2_win">
-                                        <span></span>
-                                    </div>
-                                    <div class="tb2_lose">
-                                        <span></span>
-                                    </div>
-                                    <div class="tb2_pct">
-                                        <span></span>
-                                    </div>
-                                    <div class="tb2_gb">
-                                        <span>0</span>
-                                    </div>
-                                    <div class="tb2_home">
-                                        <span>33-0</span>
-                                    </div>
-                                    <div class="tb2_road">
-                                        <span>24-17</span>
-                                    </div>
-                                    <div class="tb2_div">
-                                        <span>8-8</span>
-                                    </div>
-                                    <div class="tb2_ppg">
-                                        <span>104.3</span>
-                                    </div>
-                                    <div class="tb2_oppg">
-                                        <span>98.3</span>
-                                    </div>
-                                    <div class="tb2_diff">
-                                        <span>+6.0</span>
-                                    </div>
-                                    <div class="tb2_strk">
-                                        <span>l1</span>
-                                    </div>
-                                    <div class="tb2_l10">
-                                        <span>6-4</span>
-                                    </div>
-                            </ul>
-                            <!--Table 2 End-->
-                            <!--Pagination Start-->
-                            <ul class="kf_table table_style3">
-                                <li>
-                                    <div class="table_info">
-                                        <span><b>W:</b> Wings</span>
-                                    </div>
-                                    <div class="table_info">
-                                        <span><b>gb:</b> Game Back</span>
-                                    </div>
-                                    <div class="table_info">
-                                        <span><b>div:</b> Division record</span>
-                                    </div>
-                                    <div class="table_info">
-                                        <span><b>diff:</b> Average Point Differential</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="table_info">
-                                        <span><b>l:</b> loose</span>
-                                    </div>
-                                    <div class="table_info">
-                                        <span><b>home:</b> Home Record</span>
-                                    </div>
-                                    <div class="table_info">
-                                        <span><b>ppg:</b> Points per Game</span>
-                                    </div>
-                                    <div class="table_info">
-                                        <span><b>strk:</b> Current Streak</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="table_info">
-                                        <span><b>pct:</b> Winning percentage</span>
-                                    </div>
-                                    <div class="table_info">
-                                        <span><b>road:</b> Road Record</span>
-                                    </div>
-                                    <div class="table_info">
-                                        <span><b>OPP PPG:</b> Opponent Points per Game</span>
-                                    </div>
-                                    <div class="table_info">
-                                        <span><b>l10:</b> Record Last 10 Games</span>
-                                    </div>
-                                </li>
-                            </ul>
-                            <!--Pagination End-->
-                        </div>
-                        <!--Overview Contant End-->
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="latest">
-                        <!--Overview Contant Start-->
-                        <div class="kf_overview_contant">
-                            <!--Heading 1 Start-->
-                            <h6 class="kf_hd1 margin_0">
-                                <span>Latest Result</span>
-                            </h6>
-                            <!--Heading 1 End-->
-                            <!--Table 2 Start-->
-                            <ul class="kf_table2 kf_table4 table-center">
-                                <li class="table_head">
-                                    <div class="tb2_date">
-                                        <span>Date</span>
-                                    </div>
-                                    <div class="versus">
-                                        <span>versus</span>
-                                    </div>
-                                    <div class="tb2_score">
-                                        <span>Score </span>
-                                    </div>
-                                    <div class="tb2_status">
-                                        <span>status</span>
-                                    </div>
-                                    <div class="tb2_hipoints">
-                                        <span>hi points</span>
-                                    </div>
-                                    <div class="tb2_hirebounds">
-                                        <span>hi rebounds</span>
-                                    </div>
-                                    <div class="tb2_hiassists">
-                                        <span>hi assists</span>
-                                    </div>
-                                    <div class="tb2_histeals">
-                                        <span>hi steals</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="tb2_date">
-                                        <span>Friday, March 16</span>
-                                    </div>
-                                    <div class="versus">
-                                        <div>
-                                            <span><img src="images/team_logo.png" alt=""></span>
-                                            <p>
-                                                <a href="#">Ocean Kings</a>
-                                                <span>Marine Collage</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="tb2_score">
-                                        <span>W 107-102</span>
-                                    </div>
-                                    <div class="tb2_status">
-                                        <span>Home</span>
-                                    </div>
-                                    <div class="tb2_hipoints">
-                                        <span>James Cirobilli 23 (ALC) </span>
-                                    </div>
-                                    <div class="tb2_hirebounds">
-                                        <span>Tom Hoopstern 11 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_hiassists">
-                                        <span>Jet Valentine 6 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_histeals">
-                                        <span>Griffin Peterson 8 (ALC)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="tb2_date">
-                                        <span>Thursday, March 02</span>
-                                    </div>
-                                    <div class="versus">
-                                        <div>
-                                            <span><img src="images/team_logo2.png" alt=""></span>
-                                            <p>
-                                                <a href="#">Ocean Kings</a>
-                                                <span>Marine Collage</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="tb2_score">
-                                        <span>W 107-102</span>
-                                    </div>
-                                    <div class="tb2_status">
-                                        <span>Home</span>
-                                    </div>
-                                    <div class="tb2_hipoints">
-                                        <span>James Cirobilli 23 (ALC) </span>
-                                    </div>
-                                    <div class="tb2_hirebounds">
-                                        <span>Tom Hoopstern 11 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_hiassists">
-                                        <span>Jet Valentine 6 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_histeals">
-                                        <span>Griffin Peterson 8 (ALC)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="tb2_date">
-                                        <span>Saturday, March 20</span>
-                                    </div>
-                                    <div class="versus">
-                                        <div>
-                                            <span><img src="images/team_logo3.png" alt=""></span>
-                                            <p>
-                                                <a href="#">Ocean Kings</a>
-                                                <span>Marine Collage</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="tb2_score">
-                                        <span>W 107-102</span>
-                                    </div>
-                                    <div class="tb2_status">
-                                        <span>Home</span>
-                                    </div>
-                                    <div class="tb2_hipoints">
-                                        <span>James Cirobilli 23 (ALC) </span>
-                                    </div>
-                                    <div class="tb2_hirebounds">
-                                        <span>Tom Hoopstern 11 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_hiassists">
-                                        <span>Jet Valentine 6 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_histeals">
-                                        <span>Griffin Peterson 8 (ALC)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="tb2_date">
-                                        <span>Friday, March 16</span>
-                                    </div>
-                                    <div class="versus">
-                                        <div>
-                                            <span><img src="images/team_logo4.png" alt=""></span>
-                                            <p>
-                                                <a href="#">Ocean Kings</a>
-                                                <span>Marine Collage</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="tb2_score">
-                                        <span>W 107-102</span>
-                                    </div>
-                                    <div class="tb2_status">
-                                        <span>Home</span>
-                                    </div>
-                                    <div class="tb2_hipoints">
-                                        <span>James Cirobilli 23 (ALC) </span>
-                                    </div>
-                                    <div class="tb2_hirebounds">
-                                        <span>Tom Hoopstern 11 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_hiassists">
-                                        <span>Jet Valentine 6 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_histeals">
-                                        <span>Griffin Peterson 8 (ALC)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="tb2_date">
-                                        <span>Friday, March 16</span>
-                                    </div>
-                                    <div class="versus">
-                                        <div>
-                                            <span><img src="images/team_logo.png" alt=""></span>
-                                            <p>
-                                                <a href="#">Ocean Kings</a>
-                                                <span>Marine Collage</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="tb2_score">
-                                        <span>W 107-102</span>
-                                    </div>
-                                    <div class="tb2_status">
-                                        <span>Home</span>
-                                    </div>
-                                    <div class="tb2_hipoints">
-                                        <span>James Cirobilli 23 (ALC) </span>
-                                    </div>
-                                    <div class="tb2_hirebounds">
-                                        <span>Tom Hoopstern 11 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_hiassists">
-                                        <span>Jet Valentine 6 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_histeals">
-                                        <span>Griffin Peterson 8 (ALC)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="tb2_date">
-                                        <span>Thursday, March 02</span>
-                                    </div>
-                                    <div class="versus">
-                                        <div>
-                                            <span><img src="images/team_logo2.png" alt=""></span>
-                                            <p>
-                                                <a href="#">Ocean Kings</a>
-                                                <span>Marine Collage</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="tb2_score">
-                                        <span>W 107-102</span>
-                                    </div>
-                                    <div class="tb2_status">
-                                        <span>Home</span>
-                                    </div>
-                                    <div class="tb2_hipoints">
-                                        <span>James Cirobilli 23 (ALC) </span>
-                                    </div>
-                                    <div class="tb2_hirebounds">
-                                        <span>Tom Hoopstern 11 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_hiassists">
-                                        <span>Jet Valentine 6 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_histeals">
-                                        <span>Griffin Peterson 8 (ALC)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="tb2_date">
-                                        <span>Saturday, March 20</span>
-                                    </div>
-                                    <div class="versus">
-                                        <div>
-                                            <span><img src="images/team_logo3.png" alt=""></span>
-                                            <p>
-                                                <a href="#">Ocean Kings</a>
-                                                <span>Marine Collage</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="tb2_score">
-                                        <span>W 107-102</span>
-                                    </div>
-                                    <div class="tb2_status">
-                                        <span>Home</span>
-                                    </div>
-                                    <div class="tb2_hipoints">
-                                        <span>James Cirobilli 23 (ALC) </span>
-                                    </div>
-                                    <div class="tb2_hirebounds">
-                                        <span>Tom Hoopstern 11 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_hiassists">
-                                        <span>Jet Valentine 6 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_histeals">
-                                        <span>Griffin Peterson 8 (ALC)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="tb2_date">
-                                        <span>Friday, March 16</span>
-                                    </div>
-                                    <div class="versus">
-                                        <div>
-                                            <span><img src="images/team_logo4.png" alt=""></span>
-                                            <p>
-                                                <a href="#">Ocean Kings</a>
-                                                <span>Marine Collage</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="tb2_score">
-                                        <span>W 107-102</span>
-                                    </div>
-                                    <div class="tb2_status">
-                                        <span>Home</span>
-                                    </div>
-                                    <div class="tb2_hipoints">
-                                        <span>James Cirobilli 23 (ALC) </span>
-                                    </div>
-                                    <div class="tb2_hirebounds">
-                                        <span>Tom Hoopstern 11 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_hiassists">
-                                        <span>Jet Valentine 6 (SHR)</span>
-                                    </div>
-                                    <div class="tb2_histeals">
-                                        <span>Griffin Peterson 8 (ALC)</span>
-                                    </div>
-                                </li>
-                            </ul>
-                            <!--Table 2 End-->
-                        </div>
-                        <!--Overview Contant End-->
                     </div>
                     <div role="tabpanel" class="tab-pane" id="schedule">
                         <!--Overview Contant Start-->
@@ -1284,66 +765,6 @@
                             <!--Table 2 End-->
                         </div>
                         <!--Overview Contant End-->
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="gallery">
-                        <div class="kode-gallery">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <figure>
-                                        <img src="extra-images/kodegallery1.jpg" alt="">
-                                        <figcaption>
-                                            <h4>Great Game Ever In History</h4>
-                                            <a data-rel="prettyPhoto[]" href="extra-images/kodegallery1.jpg"><i class="fa fa-eye"></i></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-md-4">
-                                    <figure>
-                                        <img src="extra-images/kodegallery2.jpg" alt="">
-                                        <figcaption>
-                                            <h4>Great Game Ever In History</h4>
-                                            <a data-rel="prettyPhoto[]" href="extra-images/kodegallery2.jpg"><i class="fa fa-eye"></i></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-md-4">
-                                    <figure>
-                                        <img src="extra-images/kodegallery3.jpg" alt="">
-                                        <figcaption>
-                                            <h4>Great Game Ever In History</h4>
-                                            <a data-rel="prettyPhoto[]" href="extra-images/kodegallery3.jpg"><i class="fa fa-eye"></i></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-md-4">
-                                    <figure>
-                                        <img src="extra-images/kodegallery4.jpg" alt="">
-                                        <figcaption>
-                                            <h4>Great Game Ever In History</h4>
-                                            <a data-rel="prettyPhoto[]" href="extra-images/kodegallery4.jpg"><i class="fa fa-eye"></i></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-md-4">
-                                    <figure>
-                                        <img src="extra-images/kodegallery5.jpg" alt="">
-                                        <figcaption>
-                                            <h4>Great Game Ever In History</h4>
-                                            <a data-rel="prettyPhoto[]" href="extra-images/kodegallery5.jpg"><i class="fa fa-eye"></i></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-md-4">
-                                    <figure>
-                                        <img src="extra-images/kodegallery6.jpg" alt="">
-                                        <figcaption>
-                                            <h4>Great Game Ever In History</h4>
-                                            <a data-rel="prettyPhoto[]" href="extra-images/kodegallery6.jpg"><i class="fa fa-eye"></i></a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

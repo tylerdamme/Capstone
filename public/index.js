@@ -1,4 +1,5 @@
-/* global Vue, VueRouter, axios */
+/* global Vue, VueRouter, axios, VueScrollTo */
+Vue.use(VueScrollTo);
 
 var HomePage = {
   template: "#home-page",

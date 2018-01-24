@@ -1090,7 +1090,7 @@ section {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url(extra-images/inner_banner.jpg);
+	background-image: url(images/pexels-photo-61135.jpeg);
 }
 .innner_banner:before {
 	top: 0;
@@ -3734,4 +3734,40 @@ footer .widget {
 .kode-load a:hover {
 	background-color: #fff;
 	color: #000;
+}
+
+/* Vue.js fade */
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 2.5s;
+}
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
+
+/* Vue.js slide-right */
+.slide-right-enter-active {
+	transition: all 0.3s ease;
+}
+.slide-right-leave-active {
+	transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-right-enter,
+.slide-right-leave-to {
+	transform: translateX(10px);
+	opacity: 0;
+}
+
+/* Vue.js slide-left */
+.slide-left-enter-active {
+	transition: all 0.3s ease;
+}
+.slide-left-leave-active {
+	transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-left-enter,
+.slide-left-leave-to {
+	transform: translateX(-10px);
+	opacity: 0;
 }

@@ -55,15 +55,15 @@
 .kf_featured_thumb4:hover .text h6 a,
 .kode_header_2 .kode_navigation li:hover > a,
 .kf_comingsoon .input_dec input[type="button"],
-.comment_hd ul li a:hover, .comment_hd ul li span:hover,
+.comment_hd ul li a:hover,
+.comment_hd ul li span:hover,
 .kf_opponents_wrap2 .kf_opponents_gols h5,
 .kode_header_2 .kode_navigation li ul li:hover > a,
-.kode_header_2 .kode_navigation li ul li:hover > a:before
-{
-	color:#ffbe00;
+.kode_header_2 .kode_navigation li ul li:hover > a:before {
+	color: #ffbe00;
 }
-.canvasjs-chart-tooltip span{
-	color:#ffbe00 !important;
+.canvasjs-chart-tooltip span {
+	color: #ffbe00 !important;
 }
 /*
 	  ============================================================
@@ -112,13 +112,11 @@
 .kf_rangeslider .ui-slider .ui-slider-range,
 .kf_progress_wrap .kf_progress .progress-bar,
 .kode_header_2 .kode_navigation li ul li a:hover,
-.kf_ticket2_wrap ul li:hover .ticket_button button
-{
-	background-color:#ffbe00;
+.kf_ticket2_wrap ul li:hover .ticket_button button {
+	background-color: #ffbe00;
 }
-.kf_progress1 .progressbars.progress_single
-{
-	background-color:#ffbe00 !important;
+.kf_progress1 .progressbars.progress_single {
+	background-color: #ffbe00 !important;
 }
 /*
 	  ============================================================
@@ -144,9 +142,8 @@
 .kode-pagination .page-numbers.current,
 .radio_style3 input:checked + .radio-value,
 .kode_header_2 .kode_navigation li ul li:hover a,
-.kf_ticket2_wrap ul li:hover .ticket_button button
-{
-	border-color:#ffbe00;
+.kf_ticket2_wrap ul li:hover .ticket_button button {
+	border-color: #ffbe00;
 }
 /*
 	  ============================================================
@@ -229,15 +226,17 @@
 .kf_contct_thumb:hover .text em,
 .input_label input[type="button"],
 .kf_contct_thumb:hover .text address,
-.comment_hd ul li a, .comment_hd ul li span,
-.kode-gallery figure,.kode-gallery figure figcaption,
-.kode-gallery figcaption a,.kode-gallery figure img,
+.comment_hd ul li a,
+.comment_hd ul li span,
+.kode-gallery figure,
+.kode-gallery figure figcaption,
+.kode-gallery figcaption a,
+.kode-gallery figure img,
 .kode_header_2 .kode_navigation li ul li a:before,
-.kode-gallery figure:before
-{
-	-webkit-transition:all 0.3s ease-in-out;
-		-moz-transition:all 0.3s ease-in-out;
-			-ms-transition:all 0.3s ease-in-out;
-				-o-transition:all 0.3s ease-in-out;
-					transition:all 0.3s ease-in-out;	
+.kode-gallery figure:before {
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }

@@ -282,6 +282,7 @@
         <div class="innner_banner">
             <div class="container">
                 <h3>Your Teams</h3>
+                <p style="color:white;">Welcome to your clubhouse! <br>Add a team using the menu above, or click "go to clubhouse" to view the latest information on your teams.</p>
             </div>
         </div>
         <div class="kode_content_wrap">
@@ -289,7 +290,8 @@
                 <!--Featured 2 Slider Start-->
                 <div class="kf_featured_wrap2">
                     <div class="row">
-                        <div class="col-md-4 col-sm-6" v-for="team in teams">
+                        <transition-group name="fade">
+                        <div class="col-md-4 col-sm-6" v-for="team in teams" v-bind:key="team.id">
                             <!--Featured 4 Thumb Start-->
                             <div class="kf_featured_thumb4">
                                 <figure>
@@ -300,8 +302,8 @@
                                     <h6><a v-bind:href=" '/#/teams/' + team.id">Go to Clubhouse</a></h6>
                                 </div>
                             </div>
-                            <!--Featured 4 Thumb End-->
-                        </div>
+                        </transition-group>
+                    </div>
                     </div>
                 </div>
             </section>

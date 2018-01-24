@@ -97,20 +97,13 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#" v-scroll-to="'.kf_social3'">contact us</a></li>
+                                <li><a href="#" v-scroll-to="'#footer'">contact</a></li>
                             </ul>
                             <!--DL Menu Start-->
                             <div id="kode-responsive-navigation" class="dl-menuwrapper">
                                 <button class="dl-trigger">Open Menu</button>
                                 <ul class="dl-menu">
                                     <li><a href="/">home</a></li>
-                                    <li class="menu-item kode-parent-menu">
-                                        <a href="#">Fixtures & Results</a>
-                                        <ul class="dl-submenu">
-                                            <li><a href="latest-result.html">latest result</a></li>
-                                            <li><a href="team-schedule.html">teamschedule</a></li>
-                                        </ul>
-                                    </li>
                                     <li class="menu-item kode-parent-menu"><a href="#">blog</a>
                                         <ul class="dl-submenu">
                                             <li>
@@ -195,7 +188,7 @@
                             <!--Widget Text Start-->
                             <div class="widget widget_text">
                                 <div class="logo">
-                                    <a href="#"><img src="images/ft_logo2.png" alt=""></a>
+                                    <a href="#" class="disable-me"><img src="images/ft_logo2.png" alt=""></a>
                                 </div>
                                 <p>Questions, comments, (gulp) bugs? Reach out to me via the links below!</p>
                                 <ul class="kf_contact_meta">
@@ -213,7 +206,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="widget widget_text" style="text-align: center;">
-                                <h2 class="kf_hd7">Find me on social media</h2>
+                                <h2 class="kf_hd7" id="footer">Find me on social media</h2>
                                 <ul class="kf_social3">
                                     <li>
                                         <a href="https://www.twitter.com/tylerdamme"><i class="fa fa-twitter"></i></a>
@@ -407,14 +400,6 @@
                                     <!--Widget Next Match Dec End-->
                                 </div>
                             </div>
-                            
-                            <!--Widget Add 2 Strat-->
-                            <div class="widget widget_add">
-                                <div class="add_banner">
-                                    <a href="#"><img src="extra-images/add_banner2.jpg" alt=""></a>
-                                </div>
-                            </div>
-                            <!--Widget Add 2 End-->
                         </aside>
                         </div>
                         </div>
@@ -699,12 +684,12 @@
                                     <div class="versus">
                                         <div>
                                             <p>
-                                                <a href="#">{{ result.strEvent }}</a>
+                                                <a href="javascript:void(0)">{{ result.strEvent }}</a>
                                             </p>
                                         </div>
                                     </div>
                                     <div class="tb2_time">
-                                        <span>{{ result.strTime }}T</span>
+                                        <span>{{ result.strTime }}</span>
                                     </div>
                                     <div class="tb2_comatition">
                                         <span>{{ result.strLeague }}</span>
@@ -729,7 +714,7 @@
                                     <div class="versus">
                                         <div>
                                             <p>
-                                                <a href="#">{{ event.strEvent }}</a>
+                                                <a href="javascript:void(0)">{{ event.strEvent }}</a>
                                             </p>
                                         </div>
                                     </div>
@@ -758,7 +743,6 @@
                         <!--Overview Contant End-->
                     </div>
                 </div>
-
         </section>
     </div>
 </template>

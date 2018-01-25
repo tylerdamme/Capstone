@@ -12,4 +12,18 @@ class V1::UserTeamsController < ApplicationController
       render json: {errors: user_team.errors.full_messages}, status: :bad_request
     end
   end
+
+  def destroy
+    puts "hello"
+    user_team = UserTeam.find_by(
+      team_id: params[:team_id],
+      user_id: current_user.id)
+    puts "#{user_team}"
+    if user_team
+      user_team.destroy
+      render json: {message: "team successfully removed"}
+    else
+      render json: {message: "team has not been removed"}
+    end
+  end
 end

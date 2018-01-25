@@ -7,12 +7,6 @@ class V1::TeamsController < ApplicationController
   end
 
   def show
-    # job_id = Rufus::Scheduler.singleton.every '1s' do
-    #   puts "job #{job_id}"
-    # end
-    
-
-
     team = Team.find_by(id: params[:id])
     render json: team.as_json
   end

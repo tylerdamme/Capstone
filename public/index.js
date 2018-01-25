@@ -13,15 +13,6 @@ var HomePage = {
     axios.get("/v1/teams").then(
       function(response) {
         this.teams = response.data;
-        // console.log("the teams are", this.teams.length, this.teams);
-        // this.teams.forEach(
-        //   function(team) {
-        //     axios.get("/v1/info?team_id=" + team.id).then(function(response) {
-        //       team.info = response.data;
-        //       console.log("team info: ", team.info);
-        //     });
-        //   }.bind(this)
-        // );
         for (var i = 0; i < this.teams.length; i++) {
           let team = this.teams[i];
           axios.get("/v1/info?team_id=" + team.id).then(
@@ -33,17 +24,24 @@ var HomePage = {
                 "TeamArtUrl",
                 response.data.team_info.teams[0].strTeamFanart1
               );
-
-              // team.info = response.data;
-              // console.log("...", this.teams);
-              // this.$forceUpdate();
             }.bind(this)
           );
         }
       }.bind(this)
     );
   },
-  methods: {},
+  methods: {
+    removeTeam: function(team) {
+      var params = {
+        team_id: team.id
+      };
+      axios.delete("v1/user_teams", { params: params }).then(location.reload());
+
+      // location.reload();
+      // find and delete the team from this.teams
+      // one way is to use array.filter - this.teams = this.teams.filter()
+    }
+  },
   computed: {}
 };
 

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     patch "/price_watches" => "price_watches#update"
     # delete "/news_sources/:id" => "news_sources#destroy"
     delete "/news_source_by_name" => "news_sources#destroy_by_name"
+    delete "/user_teams" => "user_teams#destroy"
 
     get "/teams" => "teams#index"
     get "/news_sources" => "news_sources#index"
